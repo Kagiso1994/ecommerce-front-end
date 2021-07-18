@@ -1,0 +1,185 @@
+#mobileApp .image-with-text img {
+    float: left;
+    margin-right: 15px;
+}
+
+#mobileApp .block {
+    display: block;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+#mobileApp .button-group,
+#mobileApp .icon-group {
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+
+#mobileApp .button-group {
+    table-layout: fixed;
+}
+
+#mobileApp .button-group .km-button {
+    display: table-cell;
+    padding: .6em .8em;
+    margin: 1em 0;
+}
+
+#mobileApp .button-group.button-group-vertical .km-button {
+    display: block;
+}
+
+#mobileApp.km-flat .button-group .km-button.primary {
+    color: #fff;
+    background-color: #10c4b2;
+}
+
+#mobileApp.km-ios7 .button-group .km-button.primary {
+    color: #fff;
+    background-color: #007aff;
+}
+
+#mobileApp.km-android .button-group .km-button.primary {
+    color: #fff;
+    background-color: #33b5e5;
+}
+
+#mobileApp.km-nova .button-group .km-button.primary {
+    color: #fff;
+    background-color: #ff4350;
+    border-color: #ff4350;
+}
+
+#mobileApp .group-separator {
+    border: none;
+    background: transparent;
+}
+
+#mobileApp .group-separator-header {
+    margin: 1em 0;
+}
+
+#mobileApp .app-icon {
+    text-align: center;
+    margin: 3em 0;
+}
+
+#mobileApp .view-title {
+    text-align: center;
+    font-weight: normal;
+}
+
+#mobileApp .km-drawer-button:after,
+#mobileApp .km-drawer-button:before {
+    content: '\e077';
+}
+
+#mobileApp.km-flat .km-drawer .km-content {
+    background-color: #fcfcfc;
+}
+
+#mobileApp form .form-content li p {
+    margin: 0;
+}
+
+#mobileApp .icon-group .app-icon,
+#mobileApp .icon-group .app-details {
+    display: table-cell;
+    vertical-align: top;
+}
+
+#mobileApp .icon-group .app-icon {
+    margin: 0;
+    width: 5em;
+    overflow: hidden;
+    text-align: left;
+}
+
+#mobileApp .icon-group .app-icon img {
+    display: block;
+    max-width: 5em;
+    height: auto;
+}
+
+#mobileApp .icon-group .app-details h2,
+#mobileApp .icon-group .app-details h4 {
+    font-weight: normal;
+    margin: 0;
+}
+
+#mobileApp .icon-group .app-details h4 {
+    color: #828282;
+    margin-top: 0.5em;
+}
+
+#mobileApp #navigation-container.km-tabstrip .km-button {
+    vertical-align: top;
+}
+
+#mobileApp #navigation-container.km-tabstrip .km-button .km-text {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+#mobileApp #navigation-container .active {
+    background: #10c4b2;
+    color: #fff;
+}
+
+#mobileApp #navigation-container .active:after {
+    color: #fff;
+}
+
+#mobileApp.km-nova #navigation-container.km-tabstrip .km-button {
+    vertical-align: middle;
+}
+
+#mobileApp.km-nova p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#mobileApp.km-nova span.km-switch {
+    color: #ff4350;
+}
+
+#mobileApp.km-nova span.km-switch.km-switch-on input[type=checkbox]:checked + span + span {
+    border-color: #ff4350;
+    background-color: #ff4350;
+}
+
+#mobileApp .unsupported-preview {
+    text-align: center;
+    margin-top: 12rem;
+}
+
+#mobileApp .info-icon {
+    margin: 0 auto;
+    width: 3.3rem;
+    height: 3.3rem;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABIklEQVRoge3YMU4CURDG8R+KqImGxNoTWNgYqSgtvYBn8EY2nkE7LTwItbGUwhgLFSxgLTS4i4w+SOafTDc73/vydva9HZIkSZIlooNrPM6IK2wUW10DehjXRC9ScC2ymMkOROQ0JtrAv5MGvjAKyinGLgZmN/AAO5GCrchiU9rY9313R7jH2x9oJslvieqBU5z5+Zowwh0ugjTD6OBF/RWiioNI8YhzYBtbc+TvBWh+kiexwt/1CAPPuMR7QK3i9NU3cT9SMHugNGmgNGmgNCtvYD2ozjHOcYLDmtxNHOEJD0H6C9HGUPPbaBXD6bPF6Zp/8VV0FxVf+R6IMLDInGdpZkS35n99biKEo/6JWyazoKaj81eTGdE4SD9JkiRJVpMPXjloDVm2S04AAAAASUVORK5CYII=');
+    background-repeat: no-repeat;
+}
+
+#mobileApp .editableListItem label {
+    display: block;
+}
+
+#mobileApp .editableListItem label span {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    word-break: break-word;
+}
+
+
+/* START_CUSTOM_CODE_mobileApp */
+
+
+/* Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes */
+
+
+/* END_CUSTOM_CODE_mobileApp */

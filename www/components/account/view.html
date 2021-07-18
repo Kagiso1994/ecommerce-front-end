@@ -1,0 +1,42 @@
+<div data-role="view" data-layout="main-nav" data-model="app.account" data-show="app.account.onShow" data-after-show="app.account.afterShow"
+    data-use-native-scrolling="true">
+    <div id="accountModel">
+
+        <div class="row account-cred-div">
+            <ul>
+                <li data-bind="events: {click: accountModel.orders}">
+                    <div class="row account-items">
+                        <span>
+                            Orders
+                        </span>
+                    </div>
+                </li>
+                <hr style="margin: 0px;border-color: #eadede;">
+                <li data-bind="events: {click: accountModel.userDetails}">
+                    <div class="row account-items">
+                        <span>
+                            Personal Details
+                        </span>
+                    </div>
+                </li>
+                <hr style="margin: 0px;border-color: #eadede;">
+                <li data-bind="events: {click: accountModel.addressBook}">
+                    <div class="row account-items">
+                        <span>
+                            Address Book
+                        </span>
+                    </div>
+                </li>
+                <li style="margin-top: 10px" data-bind="events: {click: accountModel.logout}">
+                    <div class="row account-items">
+                        <i style="float: right;" class="small material-icons">exit_to_app</i>
+                        <span>
+                           Logout
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<div data-role="view" data-layout="main" data-model="app.editDetails" data-show="app.editDetails.onShow" data-after-show="app.editDetails.afterShow"
+    data-use-native-scrolling="true">
+    <div id="editDetailsModel">
+
+        <div class="row login-cred-div formEditNames">
+            <form id="editDetailsFormNames" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input id="icon_firstname" type="text" class="validate" data-bind="value: editDetailsModel.fields.firstname">
+                        <label for="icon_firstname">Firstname</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input id="icon_lastname" type="text" data-bind="value: editDetailsModel.fields.lastname">
+                        <label for="icon_lastname">Lastname</label>
+                    </div>
+                </div>
+                <div>
+                    <a style="float: right;" class="btn editDetails-button" data-bind="events: {click: editDetailsModel.saveNames}">Save</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="row login-cred-div formEditEmail" >
+            <form id="editDetailsFormEmail" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="icon_mail" type="email" class="validate" data-bind="value: editDetailsModel.fields.email" required>
+                        <label for="icon_mail">Email</label>
+                        <span class="helper-text" data-error="Incorrect email" data-success="right">E.g. user@groceries.co.za</span>
+                    </div>
+                </div>
+                <div>
+                    <a style="float: right;" class="btn editDetails-button" data-bind="events: {click: editDetailsModel.saveEmail}">Save</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="row login-cred-div formEditMobileNum">
+            <form id="editDetailsFormMobileNum" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="icon_mail" type="tel" class="validate" minlength="10" maxlength="10" data-bind="value: editDetailsModel.fields.mobileNum"
+                            required>
+                        <label for="icon_mail">Mobile Number</label>
+                        <span class="helper-text" data-error="Incorrect mobile number" data-success="right">E.g 0761234567</span>
+                    </div>
+                </div>
+                <div>
+                    <a style="float: right;" class="btn editDetails-button" data-bind="events: {click: editDetailsModel.saveMobileNum}">Save</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="row login-cred-div formEditPassword">
+            <form id="editDetailsFormPassword" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input id="icon_lock" type="password" data-bind="value: editDetailsModel.fields.oldPassword" required>
+                        <label for="icon_lock">Old Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input id="icon_lock" type="password" data-bind="value: editDetailsModel.fields.newPassword" required>
+                        <label for="icon_lock">New Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input id="icon_lock" type="password" data-bind="value: editDetailsModel.fields.confirmPassword" required>
+                        <label for="icon_lock">Confirm New Password</label>
+                    </div>
+                </div>
+                <div>
+                    <a style="float: right;" class="btn editDetails-button" data-bind="events: {click: editDetailsModel.savePassword}">Save</a>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>

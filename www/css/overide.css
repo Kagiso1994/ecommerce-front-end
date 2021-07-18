@@ -1,0 +1,22 @@
+.km-view-title{
+    background-color: #145A32;
+    color:#fff;
+}
+
+.km-footer {
+    line-height: 2.3em;
+    background: #f4f4f4;
+    border: 0.01px solid gainsboro;
+}
+
+.km-root a {
+     color: #2981c4; 
+}
+
+.k-invalid-msg{
+    color: red !important;
+}
+
+.toast{
+    background-color: green;
+}

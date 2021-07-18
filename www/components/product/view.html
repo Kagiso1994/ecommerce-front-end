@@ -1,0 +1,36 @@
+<div id="product-page" data-role="view" data-title="getTitle()" data-layout="main-nav" data-model="app.product" data-show="app.product.onShow"
+    data-after-show="app.product.afterShow" data-use-native-scrolling="true">
+    <div id="productModel">
+        <div class="product-holder">
+            <img id="view-product" src="" alt="">
+        </div>
+        <div class="view-product-outer">
+            <div class="view-product-inner">
+                <center>
+                    <h2 id="view-product-name"></h2>
+                    <h3 id="view-product-price"></h3>
+                </center>
+
+                <center>
+                    <a data-bind="events: {click: productModel.addToCart}" class="  btn-large view-product-add-cart" ><i class="material-icons left">add_shopping_cart</i>Add to cart</a>
+                    
+                </center>
+
+
+            </div>
+
+            <div class="view-product-inner" style="margin-top: 15px;">
+                <h3>Desciption</h3>
+                <div class="view-product-inner-green">
+                    <p id="product-description"></p>
+
+
+                </div>
+            </div>
+
+            <!-- <center style="margin-top: 25px"><a class="  btn nav-back-button" data-bind="events: {click: productModel.back}">Back</a></center> -->
+
+
+        </div>
+    </div>
+</div>

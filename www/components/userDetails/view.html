@@ -1,0 +1,86 @@
+<div data-role="view" data-layout="main" data-model="app.userDetails" data-show="app.userDetails.onShow" data-after-show="app.userDetails.afterShow"
+    data-use-native-scrolling="true">
+    <div id="userDetailsModel">
+        <div class="row userDetails-cred-div">
+            <ul>
+                <li class="userDetails-li" data-bind="events: {click: userDetailsModel.editNames}">
+                    <div class="row userDetailsRow">
+                        <div class="col s6">
+                            <span class="labelUserDetails">
+                                Your Name
+                            </span>
+                            <br>
+                            <span  data-bind="text: userDetailsModel.fields.name"> 
+                                
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <span class="editUserDetails">
+                                EDIT
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <hr style="margin: 0px;border-color: #eadede;">
+                <li class="userDetails-li" data-bind="events: {click: userDetailsModel.editEmail}">
+                   <div class="row userDetailsRow">
+                        <div class="col s6">
+                            <span class="labelUserDetails">
+                                Email Address
+                            </span>
+                            <br>
+                            <span  data-bind="text: userDetailsModel.fields.email"> 
+                                
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <span class="editUserDetails">
+                                EDIT
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <hr style="margin: 0px;border-color: #eadede;">
+                <li class="userDetails-li" data-bind="events: {click: userDetailsModel.editMobileNum}">
+                   <div class="row userDetailsRow">
+                        <div class="col s6">
+                            <span class="labelUserDetails">
+                                Mobile Number
+                            </span>
+                            <br>
+                            <span  data-bind="text: userDetailsModel.fields.mobilNo"> 
+                                
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <a id="addMobileNum" class="btn" hidden>ADD</a>
+                            <span id="editMobileNum" class="editUserDetails">
+                                EDIT
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <hr style="margin: 0px;border-color: #eadede;">
+                <li class="userDetails-li" data-bind="events: {click: userDetailsModel.editPassword}">
+                   <div class="row userDetailsRow">
+                        <div class="col s6">
+                            <span class="labelUserDetails">
+                               Password
+                            </span>
+                            <br>
+                            <span  data-bind="text: userDetailsModel.fields.password"> 
+                                
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <span class="resetPassword editUserDetails">
+                                RESET
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

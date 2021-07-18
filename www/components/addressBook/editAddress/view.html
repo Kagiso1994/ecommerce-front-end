@@ -1,0 +1,69 @@
+<div data-role="view" data-layout="main" data-model="app.editAddress" data-show="app.editAddress.onShow" data-after-show="app.editDetails.afterShow"
+    data-use-native-scrolling="true">
+    <div id="editAddressModel">
+        <div class="row login-cred-div editAddress" style="padding-bottom: 0px;">
+            <form id="address" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="text" class="validate" data-bind="value: editAddressModel.fields.receipientName">
+                        <label>Recepient Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="tel" data-bind="value: editAddressModel.fields.receipientNumber">
+                        <label>Recepient Mobile Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="text" data-bind="value: editAddressModel.fields.streetAddress">
+                        <label>Street Address</label>
+                        <span class="helper-text">E.g. Church Street</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="text" data-bind="value: editAddressModel.fields.suburb">
+                        <label>Suburb</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="text" data-bind="value: editAddressModel.fields.city">
+                        <label>City/Town</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="text" data-bind="value: editAddressModel.fields.province">
+                        <label>Province</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <input type="tel" data-bind="value: editAddressModel.fields.postalCode">
+                        <label>Postal Code</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer data-role="footer" style="background:#fff;padding: 2em 10px 2em 0px;">
+        <div>
+            <a  style="float: right;margin-left: 5px;color: white;border: 1px solid #50b686;" class="btn editAddress-button" data-bind="events: {click: editAddressModel.saveAddress}">SAVE</a>
+            <a id="deleteAdressBtn" style="float: right;margin-right: 5px;background-color: white;color: #50b686;" class="btn editAddress-button" data-bind="events: {click: editAddressModel.deleteAddress}">DELETE</a>
+
+        </div>
+        <script>
+            var initialScreenSize = window.innerHeight;
+            window.addEventListener("resize", function () {
+                (window.innerHeight < initialScreenSize) ? $("[data-role=footer]").hide() : $("[data-role=footer]").show();
+            });
+        </script>
+
+    </footer>
+
+
+</div>

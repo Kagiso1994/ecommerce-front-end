@@ -1,0 +1,53 @@
+<div id="cart-page" data-role="view" data-title="getTitle()" data-layout="main-nav" data-model="app.cart" data-show="app.cart.onShow"
+    data-after-show="app.cart.afterShow" data-use-native-scrolling="true">
+    <div id="cartModel">
+        <div class="cartNotEmpty" class="view-cart-outer" style="padding-bottom: 3em;">
+            <div class="view-cart-inner" style="padding-bottom: 0px">
+                <div id="cart-items-row">
+
+
+                </div>
+            </div>
+        </div>
+
+        <center id="emptyCart" style="margin-top: 5vh;background-color: white;padding: 1.5em 0 1.5em 0;">
+            <img style="width: 20%;background-color: #50b686;border-radius: 50%;padding: 10px;" src="img/noun_empty shopping cart_685015.png" alt="">
+            <br>
+            <h3>
+                Your Shopping Cart is Empty
+            </h3>
+            <br>
+            <a  style="color: white;border: 1px solid #50b686;" class="btn editAddress-button" data-bind="events: {click: cartModel.shop}">CONTINUE SHOPPING</a>
+        </center>
+
+        
+
+    </div>
+
+    <footer class="cartNotEmpty" data-role="footer" style="border: none;">
+        <div class="row" style="font-size: 1.5em;">
+            <div class="col s6" style="padding-left: 4vw;padding-top: 5px;">
+                <span class="totalItems"></span>
+            </div>
+            <div class="col s6" style="padding-right: 4vw;padding-top: 5px;">
+                <span style="float: right;font-weight: bolder;" class="cartTotal"></span>
+            </div>
+        </div>
+
+        <div class="row">
+                <!-- <form method="post"  action="http://192.168.8.100:8080/pay">
+                    <input hidden type="text" id="check_currency" name="currency" value="USD" placeholder="">
+                    <input hidden type="text" id="check_method" name="method" value="paypal" placeholder="">
+                    <input hidden type="text" id="check_intent" name="intent" value="sale">
+                    <input hidden type="text" id="check_description" name="description" placeholder="">
+                    <input hidden type="text" id="check_auth" name="authToken" placeholder="">
+                    
+                    <input hidden id="checkoutOrder" type="submit" value="Proceed to checkout" class="btn">
+                </form> -->
+             <a class="  btn-small checkoutButton"  data-bind="events: {click: cartModel.goToCheckout}">
+                <i class="material-icons right">check</i>
+                Proceed to checkout
+            </a> 
+        </div>
+    </footer>
+</div>

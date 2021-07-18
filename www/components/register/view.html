@@ -1,0 +1,72 @@
+<div data-role="view" data-layout="main" data-model="app.register" data-show="app.register.onShow" data-after-show="app.register.afterShow"
+    data-use-native-scrolling="true">
+    <div id="registerModel">
+        <div class="login-top-div">
+            <center>
+                <h3 style="margin-top: 0px;">Sign Up</h3>
+                <br>
+                <img class="app-logo" src="img/PinClipart.com_football-lace-clipart_5379327.png" alt="" style="">
+                <br>
+                <h3 style="max-width: 50%;line-height: 40px;">A whole grocery store at your fingertips</h3>
+            </center>
+        </div>
+        <div class="row login-cred-div">
+            <form id="registerForm" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <i class="material-icons prefix">person</i>
+                        <input id="icon_firstname" type="text" class="validate" data-bind="value: registerModel.fields.firstname" required>
+                        <label for="icon_firstname">Firstname</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <i class="material-icons prefix">person</i>
+                        <input id="icon_lastname" type="text" data-bind="value: registerModel.fields.lastname" required>
+                        <label for="icon_lastname">Lastname</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">mail</i>
+                        <input id="icon_mail" type="email" class="validate" data-bind="value: registerModel.fields.username" required>
+                        <label for="icon_mail">Email</label>
+                        <span class="helper-text" data-error="Incorrect email" data-success="right">E.g. user@groceries.co.za</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="icon_lock" type="password" data-bind="value: registerModel.fields.password" required>
+                        <label for="icon_lock">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 required">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="icon_lock" type="password" data-bind="value: registerModel.fields.confirmPassword" required>
+                        <label for="icon_lock">Confirm Password</label>
+                    </div>
+                </div>
+
+                <div>
+                    <center>
+                        <a class="  btn login-button" data-bind="events: {click: registerModel.register}">Sign Up</a>
+                    </center>
+                </div>
+                <br>
+                <div style="margin-top: 15%;">
+                    <center>
+                        <h3>Already have an account?
+                            <br>
+                            <a data-bind="events: {click: registerModel.alreadyRegistered}" >Sign in</a>
+                        </h3>
+                    </center>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>

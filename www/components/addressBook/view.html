@@ -1,0 +1,32 @@
+<div data-role="view" data-layout="main" data-model="app.addressBook" data-show="app.addressBook.onShow" data-after-show="app.addressBook.afterShow"
+    data-use-native-scrolling="true">
+    <div id="addressBookModel">
+
+        <div class="row account-cred-div" style="margin-bottom: 0px;">
+            <ul>
+                <li style="padding: 1em 0 1em 0;" data-bind="events: {click: addressBookModel.addAddress}">
+                    <div class="row account-items">
+                        <div class="col s10">
+                            <span>
+                                Add Delivery Address
+                            </span>
+                        </div>
+                        <div class="col s2">
+                            <i style="float: right;" class="small material-icons">arrow_forward</i>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="row addressBook-cred-div">
+            <ul style="margin-top: 0px;" id="addressesList">
+                
+            </ul>
+        </div>
+        
+
+    </div>
+</div>

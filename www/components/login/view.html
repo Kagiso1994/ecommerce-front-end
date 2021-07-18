@@ -1,0 +1,43 @@
+<div data-role="view" data-layout="main" data-model="app.login" data-show="app.login.onShow" data-after-show="app.login.afterShow"
+ data-use-native-scrolling="true">
+	<div id="loginModel">
+		<div class="login-top-div">
+			<center>
+				<h3 style="margin-top: 0px;">Sign In</h3>
+				<br>
+				<img class="app-logo" src="img/PinClipart.com_football-lace-clipart_5379327.png" alt="">
+				<br>
+				<h3 style="max-width: 50%;line-height: 40px;">A whole grocery store at your fingertips</h3>
+			</center>
+		</div>
+		<div class="row login-cred-div">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">mail</i>
+						<input id="icon_mail"  type="text" class="validate" data-bind="value: loginModel.fields.username">
+						<label for="icon_mail">Email</label>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">lock</i>
+						<input id="icon_lock" type="password" data-bind="value: loginModel.fields.password">
+						<label for="icon_lock">Password</label>
+					</div>
+				</div>
+				<div>
+					<center><a class="  btn login-button" data-bind="events: {click: loginModel.login}">Sign In</a></center>
+				</div>
+				<br>
+				<div style="margin-top: 15%;">
+					<center><h3>Don't have an account? <br><a data-bind="events: {click: loginModel.signup}">Sign up</a></h3></center>
+				</div>
+			</form>
+		</div>
+
+
+
+	</div>
+</div>

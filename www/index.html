@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="lib/kendo/styles/kendo.mobile.flat.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/materialize/css/materialize.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/groceries.css">
+    <link rel="stylesheet" type="text/css" href="css/overide.css">
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/kendo/js/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/kendo/js/kendo.mobile.min.js"></script>
+    <script type="text/javascript" src="lib/materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/paypal-mobile-js-helper.js"></script>
+
+
+</head>
+
+<body id="mobileApp">
+    <script src="components/categories/index.js"></script>
+    <script src="components/products/index.js"></script>
+    <script src="components/product/index.js"></script>
+    <script src="components/login/index.js"></script>
+    <script src="components/register/index.js"></script>
+    <script src="components/cart/index.js"></script>
+    <script src="components/orders/index.js"></script>
+    <script src="components/orderDetails/index.js"></script>
+    <script src="components/account/index.js"></script>
+    <script src="components/userDetails/index.js"></script>
+    <script src="components/userDetails/editDetails/index.js"></script>
+    <script src="components/addressBook/index.js"></script>
+    <script src="components/addressBook/editAddress/index.js"></script>
+
+
+    <div data-role="layout" data-id="main">
+        <header data-role="header">
+            <div data-role="navbar" style="font-size: 18px">
+                    <a class="nav-button" data-align="left" data-role="backbutton"><i style="color: white" class="small material-icons">arrow_back</i></a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+    </div>
+
+    <div data-role="layout" data-id="main-nav">
+        <header data-role="header">
+            <div data-role="navbar" style="font-size: 18px">
+                <a class="nav-button" data-align="left" data-role="backbutton"><i style="color: white" class="small material-icons">arrow_back</i></a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+
+        <footer data-role="footer" style="border: none">
+            <div class="row bottomMenu" style="padding-top: 20px;margin-bottom: 0px;">
+                <div class="center-align navMenu col s3">
+                    <a onclick="navOrders()">
+                        <i class="small material-icons">card_giftcard</i>
+                        <br>
+                        <span style="font-size:12px;">Orders</span>
+                    </a>
+                </div>
+                <div class="center-align navMenu col s3">
+                    <a onclick="navCategories()">
+                        <i class="small material-icons">grid_on</i>
+                        <br>
+                        <span style="font-size:12px;">Categories</span>
+                    </a>
+                </div>
+                <div class="center-align navMenu col s3">
+                    <a onclick="navAccount()">
+                        <i class="small material-icons">person_outline</i>
+                        <br>
+                        <span style="font-size:12px;">Account</span>
+                    </a>
+                </div>
+
+                <div class="center-align navMenu col s3">
+                    <a onclick="navCart()">
+                        <i class="small material-icons">shopping_cart</i>
+                        <input id="cartIconBadge" class="notification-badge">
+                        <br>
+                        <span style="font-size:12px;">Shopping Cart</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+    function navShoppingCart() {
+        if (sessionStorage.getItem("sessionId") !== null && sessionStorage.getItem("sessionId") !== undefined) {
+            window.app.mobileApp.navigate("components/cart/view.html", "fade");
+        } else {
+            window.app.mobileApp.navigate("components/login/view.html", "fade");
+        }
+    }
+
+    function navShoppingCart() {
+        if (sessionStorage.getItem("sessionId") !== null && sessionStorage.getItem("sessionId") !== undefined) {
+            window.app.mobileApp.navigate("components/cart/view.html", "fade");
+        } else {
+            window.app.mobileApp.navigate("components/login/view.html", "fade");
+        }
+    }
+</script>
+
+</html>

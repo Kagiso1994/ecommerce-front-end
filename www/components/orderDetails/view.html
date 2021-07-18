@@ -1,0 +1,55 @@
+<div id="orderDetails-page" data-role="view" data-title="getTitle()" data-layout="main-nav" data-model="app.orderDetails"
+    data-show="app.orderDetails.onShow" data-after-show="app.orderDetails.afterShow" data-use-native-scrolling="true">
+    <div id="orderDetailsModel" style="margin-top: 10px;">
+        <div class="row view-cart-inner">
+            <div class="col s3" style="border-right: 1px solid;">
+                <i id="placedCheck" class="large material-icons">check_circle</i>
+            </div>
+            <div class="col s9">
+                <span class="detailsHead">Order Placed</span>
+                <br>
+                <p id="placedText"> </p>
+            </div>
+        </div>
+        <div class="row view-cart-inner">
+            <div class="col s3" style="border-right: 1px solid;">
+                <i id="pendingCheck" class="large material-icons">check_circle</i>
+            </div>
+            <div class="col s9">
+                <span class="detailsHead">Pending</span>
+                <br>
+                <p id="pendingText"></p>
+            </div>
+        </div>
+        <div class="row view-cart-inner">
+            <div class="col s3" style="border-right: 1px solid;">
+                <i id="confirmedCheck" class="large material-icons">check_circle</i>
+            </div>
+            <div class="col s9">
+                <span class="detailsHead">Confirmed</span>
+                <br>
+                <p id="confirmedText"></p>
+            </div>
+        </div>
+        <div class="row view-cart-inner">
+            <div class="col s3" style="border-right: 1px solid;">
+                <i id="processingCheck" class="large material-icons">check_circle</i>
+            </div>
+            <div class="col s9">
+                <span class="detailsHead">Processing</span>
+                <br>
+                <p id="processingText"></p>
+            </div>
+        </div>
+        <div class="row view-cart-inner">
+            <div class="col s3" style="border-right: 1px solid;">
+                <i id="deliveredCheck" class="large material-icons">check_circle</i>
+            </div>
+            <div class="col s9">
+                <span class="detailsHead">Delivered</span>
+                <br>
+                <p id="deliveredText"></p>
+            </div>
+        </div>
+    </div>
+</div>
