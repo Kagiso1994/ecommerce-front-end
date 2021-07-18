@@ -7,8 +7,8 @@ app.login = kendo.observable({
         let divHeight = 0.38 * window.innerHeight;
         $(".login-top-div").css("height", divHeight + 'px');
         
-        app.login.loginModel.fields.set('username', 'gola@gmail.com');
-        app.login.loginModel.fields.set('password', '12345');
+        // app.login.loginModel.fields.set('username', 'gola@gmail.com');
+        // app.login.loginModel.fields.set('password', '12345');
         M.updateTextFields();
 	},
     afterShow: function() {
@@ -19,8 +19,8 @@ app.login = kendo.observable({
 (function (parent) {
     var loginModel = kendo.observable({
         fields: {
-            'username': 'gola@gmail.com',
-            'password': '12345'
+            'username': '',
+            'password': ''
         },
         login: function (){
            var loginData = {
