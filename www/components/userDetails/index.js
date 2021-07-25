@@ -6,7 +6,7 @@ app.userDetails = kendo.observable({
         app.mobileApp.showLoading();
         $.ajax({
             type: "GET",
-            url: baseUrl + "user/userProfile" + "?authentication=" + sessionStorage.getItem("sessionId"),
+            url: baseUrl + "user/customer" + "?authentication=" + sessionStorage.getItem("sessionId"),
             contentType: "application/json",
             complete: function () {
                 app.mobileApp.hideLoading();
@@ -15,7 +15,7 @@ app.userDetails = kendo.observable({
             success: function (data) {
                 console.log(data);
                 app.userDetails.userDetailsModel.fields.set("name", data.firstName + " " + data.lastName);
-                app.userDetails.userDetailsModel.fields.set("email", data.email);
+                app.userDetails.userDetailsModel.fields.set("email", data.commEmail);
                 if(data.mobileNumber == null){
                     $("#addMobileNum").show();
                     $("#editMobileNum").hide();

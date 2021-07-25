@@ -34,7 +34,7 @@ app.editDetails = kendo.observable({
         app.mobileApp.showLoading();
         $.ajax({
             type: "GET",
-            url: baseUrl + "user/userProfile" + "?authentication=" + sessionStorage.getItem("sessionId"),
+            url: baseUrl + "user/customer" + "?authentication=" + sessionStorage.getItem("sessionId"),
             contentType: "application/json",
             complete: function () {
                 app.mobileApp.hideLoading();
@@ -44,7 +44,7 @@ app.editDetails = kendo.observable({
                 console.log(data);
                 app.editDetails.editDetailsModel.fields.set("firstname", data.firstName);
                 app.editDetails.editDetailsModel.fields.set("lastname", data.lastName);
-                app.editDetails.editDetailsModel.fields.set("email", data.email);
+                app.editDetails.editDetailsModel.fields.set("email", data.commEmail);
                 if (data.mobileNumber == null && sessionStorage.getItem("editMode") == "editMobileNum") {
                     app.mobileApp.view().header.find(".km-navbar").data("kendoMobileNavBar").title("Add Mobile Number");
                 } else {
@@ -91,7 +91,7 @@ app.editDetails = kendo.observable({
             app.mobileApp.showLoading();
             $.ajax({
                 type: "GET",
-                url: baseUrl + "user/userProfile" + "?authentication=" + sessionStorage.getItem("sessionId"),
+                url: baseUrl + "user/customer" + "?authentication=" + sessionStorage.getItem("sessionId"),
                 contentType: "application/json",
                 complete: function () {
                     console.log("Request string: " + this.url + "?" + this.data);
@@ -158,7 +158,7 @@ app.editDetails = kendo.observable({
             app.mobileApp.showLoading();
             $.ajax({
                 type: "GET",
-                url: baseUrl + "user/userProfile" + "?authentication=" + sessionStorage.getItem("sessionId"),
+                url: baseUrl + "user/customer" + "?authentication=" + sessionStorage.getItem("sessionId"),
                 contentType: "application/json",
                 complete: function () {
                     console.log("Request string: " + this.url + "?" + this.data);
@@ -223,7 +223,7 @@ app.editDetails = kendo.observable({
             app.mobileApp.showLoading();
             $.ajax({
                 type: "GET",
-                url: baseUrl + "user/userProfile" + "?authentication=" + sessionStorage.getItem("sessionId"),
+                url: baseUrl + "user/customer" + "?authentication=" + sessionStorage.getItem("sessionId"),
                 contentType: "application/json",
                 complete: function () {
                     console.log("Request string: " + this.url + "?" + this.data);

@@ -4,7 +4,7 @@ app.account = kendo.observable({
         localStorage.setItem("screen", "account");
         $.ajax({
             type: "GET",
-            url: baseUrl + "user/userProfile" + "?authentication=" + sessionStorage.getItem("sessionId"),
+            url: baseUrl + "user/customer" + "?authentication=" + sessionStorage.getItem("sessionId"),
             contentType: "application/json",
             complete: function () {
                 app.mobileApp.hideLoading();
@@ -12,7 +12,7 @@ app.account = kendo.observable({
             },
             success: function (data) {
                 console.log(data);
-                app.mobileApp.view().header.find(".km-navbar").data("kendoMobileNavBar").title(data.username);
+                app.mobileApp.view().header.find(".km-navbar").data("kendoMobileNavBar").title(data.firstName + " " + data.lastName);
             },
             error: function (d, e, c) {
                 console.log(d);
@@ -51,6 +51,7 @@ app.account = kendo.observable({
             window.app.mobileApp.navigate("components/addressBook/view.html", "fade");
         },
         logout : function () {
+            window.app.mobileApp.navigate("components/login/view.html", "fade");
             sessionStorage.removeItem("sessionId");
         }
     });

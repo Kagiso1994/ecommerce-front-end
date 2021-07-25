@@ -2,7 +2,7 @@ app.register = kendo.observable({
     onShow: function () {
         $(".km-button").show();
         localStorage.setItem("screen", "register");
-        app.mobileApp.view().header.find(".km-navbar").data("kendoMobileNavBar").title("register");
+        app.mobileApp.view().header.find(".km-navbar").data("kendoMobileNavBar").title("Register");
         // let screenSize = window.innerHeight;
         let divHeight = 0.38 * window.innerHeight;
         $(".register-top-div").css("height", divHeight + 'px');
@@ -43,7 +43,7 @@ app.register = kendo.observable({
                         data: JSON.stringify(user),
                         contentType: "application/json",
                         complete: function () {
-                            //app.mobileApp.hideLoading();
+                            app.mobileApp.hideLoading();
                             console.log("Request string: " + this.url + "?" + this.data);
                         },
                         success: function (data) {

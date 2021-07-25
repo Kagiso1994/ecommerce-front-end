@@ -71,9 +71,13 @@
     border-radius: 25px;
   }
 
+  #categories-inner-container{
+    font-weight: 600;
+  }
+
   .category-image img{
     width: 100%;
-    height: -webkit-fill-available;
+    height: 10vh;
   }
 
   .category-image{
@@ -121,7 +125,7 @@
   }
 
   .product-image img{
-  width: 100%;
+  width: 80%;
   }
 
   .pad-item{

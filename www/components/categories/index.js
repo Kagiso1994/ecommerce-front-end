@@ -44,6 +44,8 @@ app.categories = kendo.observable({
                     sessionStorage.setItem("productCategory", e.currentTarget.id);
                     window.app.mobileApp.navigate("components/products/view.html", "fade");
                 });
+
+                $("#categories-inner-container").css("font-size", 0.0132 * window.innerHeight)
             },
             error: function (d, e, c) {
                 console.log(d);

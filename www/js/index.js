@@ -18,9 +18,8 @@
  */
 
 
-const baseUrl = "https://groceries-ecommerce.herokuapp.com/";
-//const baseUrl = "http://192.168.8.100:8080/";
-
+//const baseUrl = "https://groceries-ecommerce.herokuapp.com/";
+const baseUrl = "http://192.168.8.100:8080/";
 
 (function () {
     var app = {
@@ -38,14 +37,19 @@ const baseUrl = "https://groceries-ecommerce.herokuapp.com/";
     };
 
 
-
-
     if (window.cordova) {
         document.addEventListener('deviceready', function () {
             if (navigator && navigator.splashscreen) {
                 navigator.splashscreen.hide();
             }
             app.payment.initPaymentUI();
+            function setTextZoomCallback(textZoom) {
+                console.log('WebView text should be scaled ' + textZoom + '%')
+            }
+            if (window.MobileAccessibility) {
+                window.MobileAccessibility.usePreferredTextZoom(false);
+                MobileAccessibility.setTextZoom(80, setTextZoomCallback);
+            }
 
             // Back Button Handling
             document.addEventListener('backbutton', function (evt) {
@@ -58,10 +62,10 @@ const baseUrl = "https://groceries-ecommerce.herokuapp.com/";
                         }
                     }
                     navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No");
-                }else{
-                     navigateBack();
+                } else {
+                    navigateBack();
                 }
-                
+
             }, false);
 
             bootstrap();
